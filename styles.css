@@ -1,0 +1,96 @@
+.card-item{
+	margin-bottom: 30px;
+	margin-top: 25px;
+}
+.modal-button{
+	display: flex;
+	justify-content: space-between;
+}
+.flashcard{
+	border:1px solid #0F77C6;
+	padding: 100px;
+	border-radius: 20px;
+	margin-bottom: 20px;
+  	transform-style: preserve-3d;
+ 	transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  	box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  	cursor: pointer;
+  	text-align: center;
+  	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.flashcard .back{
+	transform: rotateY(180deg);
+}
+.flashcard.flipped{
+	transform: rotateY(180deg);
+}
+.flashcard div{
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	backface-visibility: hidden;
+}
+#card-list{
+	position: relative;
+  	perspective: 40000px;
+}
+.info a{
+	text-decoration: none;
+	color: black;
+	display: inline;
+	font-size: 20px;
+}
+.info p{
+	display: inline;
+	margin-right: 40px;
+	font-size: 20px;
+	cursor: pointer;
+}
+.main h2{
+	margin-top: 30px;
+	color: #0F77C6;
+	font-weight: 700;
+}
+.main .button-group{
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 30px;
+}
+.main .button-group button{
+	background-color: #0F77C6;
+	color: white;
+	border: 1px solid #0F77C6;
+	padding: 10px 20px;
+}
+.main .button-group button:hover{
+	opacity: 0.85;
+}
+.main img{
+	width: 75%;
+}
+.bookmark{
+	font-size: 70px ;
+  	position: fixed;
+ 	right: 5%;
+  	bottom: 7%;
+  	color: #0F77C6;
+  	transition: 0.6s;
+  	display: none;
+}
+.bookmark:hover{
+	opacity: 0.7;
+}
+@media only screen and (max-width: 768px) {
+  .main .button-group{
+  	display: block;
+  }
+  .main .button-group button{
+  	display: block;
+  	margin: 30px auto;
+  	width: 300px;
+  }
+}

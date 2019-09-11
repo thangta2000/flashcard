@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FlashCard Program</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="container" id="header">
+		<div class="navbar">
+			<div class="brand">
+				<img src="avatar.png">
+			</div>
+			<div class="info">
+				<p>FAQ</p>
+				<a href="#reason">WHY FLASHCARD?</a>
+			</div>
+		</div>
+	</div>
+	<div class="main text-center container">
+		<h2>Make Your Own Flashcards</h2>
+		<img src="middle.jpg">
+		<div class="button-group">
+			<button data-toggle="modal" data-target="#card-modal">Add New Flashcard</button>
+			<button id="show-card">Show Created Flashcard</button>
+			<button id="clear-card">Clear All Created Card</button>
+		</div>
+		<div class="container">
+			<div class="row" id="card-list"></div>
+		</div>
+	</div>
+	<div class="modal fade" id="card-modal">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Add Your New Flashcard</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <div class="add-flashcard">
+				<form>
+					<div class="form-group">
+						<input id="item1" type="text" placeholder="New Word" class="form-control card-item" required>
+						<input id="item2" type="text" placeholder="Type Of Word" class="form-control card-item" required>
+						<input id="item3" type="text" placeholder="Translation" class="form-control card-item" required>
+					</div>
+					<div class="modal-button">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal" id="clear">Close</button>
+		        		<input type="submit" class="btn btn-primary" value="Add Card" id="submit">
+		        	</div>
+				</form>
+			</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	
+	<div class="container">
+		<div class="reason" id="reason">
+			<b>Why flashcards are so effective?</b><br>
+			<b>1. When you are preparing flashcards, you already learn. </b>
+			<p>You have to sort out the date in order to put the most important ones onto flashcards.</p>
+			<b>2. It's very easy to prepare flashcards. </b>
+			<p>All you need is just a sheet of paper and a marker pen. So you can spend the saved time on more repetitions.</p>
+			<b>3. Flashcards allow you to study anywhere at any time. </b>
+			<p>Their portable nature lends them to quick study sessions on the bus, in traffic, at lunch, or in the doctor’s office.</p>
+			<b>4. With flashcards, you may organize repetition in the way you you want. </b>
+			<p>You are able to separate cards into piles based on whether you need to study them again.</p>
+			<b>5. Flashcards may be used for learning at any age </b>
+			<p>- from the cradle to the grave. Their universal nature make it possible to learn foreign phrases, complex formulas, pieces of art and much more.</p>
+			<br>
+			<p>Use Flashcard.online editor to create your own sets of educational flashcards for any purpose.</p>
+		</div>
+	</div>
+	<a href="#header" class="bookmark"><i class="fas fa-caret-square-up"></i></a>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="flashcard.js"></script>
+	<script type="text/javascript" src="animation.js"></script>
+</body>
+</html>
